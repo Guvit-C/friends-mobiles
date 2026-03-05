@@ -194,9 +194,14 @@ export default function CartDrawer() {
                         <p style={{ fontSize: '0.75rem', color: 'var(--clr-text-dim)', marginBottom: '1rem', fontFamily: 'var(--font-mono)' }}>
                             Free delivery within Punjab · 3-day delivery
                         </p>
-                        <button className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                            Place Order (WhatsApp)
-                        </button>
+                        <Link
+                            to="/checkout"
+                            onClick={() => setCartOpen(false)}
+                            className="btn-primary"
+                            style={{ width: '100%', justifyContent: 'center', display: 'flex' }}
+                        >
+                            Proceed to Checkout
+                        </Link>
                     </div>
                 )}
             </div>

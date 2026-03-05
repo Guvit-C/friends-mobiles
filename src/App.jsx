@@ -13,11 +13,14 @@ import SearchPage from './pages/SearchPage'
 import LoginPage from './pages/LoginPage'
 import FAQPage from './pages/FAQPage'
 import DeliveryPage from './pages/DeliveryPage'
+import CheckoutPage from './pages/CheckoutPage'
+import TrackingPage from './pages/TrackingPage'
 
 import AdminLayout from './pages/admin/AdminLayout'
 import AdminProducts from './pages/admin/AdminProducts'
 import AdminDiscounts from './pages/admin/AdminDiscounts'
 import AdminSettings from './pages/admin/AdminSettings'
+import AdminOrders from './pages/admin/AdminOrders'
 
 function App() {
   return (
@@ -38,9 +41,12 @@ function App() {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/delivery" element={<DeliveryPage />} />
+                <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/tracking" element={<TrackingPage />} />
 
                 <Route path="/admin" element={<AdminLayout />}>
-                  <Route index element={<AdminProducts />} />
+                  <Route index element={<AdminOrders />} />
+                  <Route path="orders" element={<AdminOrders />} />
                   <Route path="products" element={<AdminProducts />} />
                   <Route path="discounts" element={<AdminDiscounts />} />
                   <Route path="settings" element={<AdminSettings />} />

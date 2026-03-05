@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { LayoutDashboard, Users, Settings, LogOut, PackageSearch, Tag } from 'lucide-react'
+import { LayoutDashboard, Users, Settings, LogOut, PackageSearch, Tag, ShoppingBag } from 'lucide-react'
 import { useAuth } from '../../context/AuthContext'
 
 const navItems = [
+    { p: '/admin/orders', l: 'Orders', i: ShoppingBag },
     { p: '/admin/products', l: 'Products', i: PackageSearch },
     { p: '/admin/discounts', l: 'Discounts', i: Tag },
     { p: '/admin/settings', l: 'Settings', i: Settings },
