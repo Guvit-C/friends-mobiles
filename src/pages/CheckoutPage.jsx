@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { supabase } from '../lib/supabase'
 
 export default function CheckoutPage() {
-    const { cart, cartTotal, clearCart } = useCart()
+    const { cartItems: cart, cartTotal, clearCart } = useCart()
     const { user } = useAuth()
     const navigate = useNavigate()
 
